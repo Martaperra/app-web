@@ -8,21 +8,20 @@
 
 <template>
   <div id="app">
-    <SliderComponent />
+    <Slidercomponent />
   </div>
 </template>
 
 <script>
-import SliderComponent from './components/SliderComponent.vue';
+import Slidercomponent from "./components/Slidercomponent.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    SliderComponent,
-  }
+    Slidercomponent,
+  },
 };
 </script>
-
 
 <style>
 #app {
