@@ -6,6 +6,24 @@
   <router-view />
 </template>
 
+<template>
+  <div id="app">
+    <SliderComponent />
+  </div>
+</template>
+
+<script>
+import SliderComponent from './components/SliderComponent.vue';
+
+export default {
+  name: 'App',
+  components: {
+    SliderComponent,
+  }
+};
+</script>
+
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
