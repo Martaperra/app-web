@@ -1,9 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import RicetteMaster from "../views/RicetteMaster.vue";
-import RicetteDetail from "../views/RicetteDetail.vue";
-
-import NotFound from "../views/NotFound.vue";
+import RicetteMaster from "../views/RicetteMaster.vue"; // Importa la tua vista delle ricette
+import RicetteDetail from "@/views/RicetteDetail.vue";
 
 const routes = [
   {
@@ -28,38 +26,8 @@ const routes = [
   {
     path: "/recipe/:id", // Rotta per la pagina di dettaglio della singola ricetta
     name: "recipe-detail",
-    component: RicetteDetail,
+    component: RicetteDetail, // Collega la vista RicetteDetail
     props: true, // Passa gli ID della ricetta come props
-  },
-  {
-    path: "/contatti",
-    name: "Contatti",
-    component: NotFound,
-  },
-  {
-    path: "/antipasti",
-    name: "Antipasti",
-    component: NotFound,
-  },
-  {
-    path: "/primi-piatti",
-    name: "PrimiPiatti",
-    component: NotFound,
-  },
-  {
-    path: "/secondi-piatti",
-    name: "SecondiPiatti",
-    component: NotFound,
-  },
-  {
-    path: "/dolci",
-    name: "Dolci",
-    component: NotFound,
-  },
-  {
-    path: "/:pathMatch(.*)*",
-    name: "NotFound",
-    component: NotFound,
   },
 ];
 
