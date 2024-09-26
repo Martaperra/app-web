@@ -3,6 +3,8 @@ import HomeView from "../views/HomeView.vue";
 import RicetteMaster from "../views/RicetteMaster.vue";
 import RicetteDetail from "../views/RicetteDetail.vue";
 
+import NotFound from "../views/NotFound.vue";
+
 const routes = [
   {
     path: "/",
@@ -28,6 +30,36 @@ const routes = [
     name: "recipe-detail",
     component: RicetteDetail,
     props: true, // Passa gli ID della ricetta come props
+  },
+  {
+    path: "/contatti",
+    name: "Contatti",
+    component: NotFound,
+  },
+  {
+    path: "/antipasti",
+    name: "Antipasti",
+    component: NotFound,
+  },
+  {
+    path: "/primi-piatti",
+    name: "PrimiPiatti",
+    component: NotFound,
+  },
+  {
+    path: "/secondi-piatti",
+    name: "SecondiPiatti",
+    component: NotFound,
+  },
+  {
+    path: "/dolci",
+    name: "Dolci",
+    component: NotFound,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: NotFound,
   },
 ];
 
