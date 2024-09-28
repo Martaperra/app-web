@@ -25,4 +25,30 @@ export default {
 };
 </script>
 
-<style src="./assets/css/stile.css"></style>
+<style>
+.btn-custom {
+  background-color: #5cb85c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-custom:hover {
+  background-color: #4cae4c;
+  transform: scale(1.05);
+}
+
+.btn-custom:active {
+  background-color: #4cae4c;
+  transform: scale(0.98);
+}
+
+.btn-custom:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+</style>

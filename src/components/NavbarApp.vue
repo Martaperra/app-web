@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand d-flex align-items-center" href="#">
       <img
-        src="../assets/logo2.jpg"
+        src="@/assets/logo.jpg"
         alt="Logo"
         width="30"
         height="30"

@@ -37,6 +37,11 @@
 </template>
 
 <script>
+// Importa le immagini dal percorso corretto
+import LasagnaImage from "@/assets/LasagnaImage.jpg";
+import PolpetteImage from "@/assets/PolpetteImage.jpg";
+import GozlemeImage from "@/assets/GozlemeImage.jpg";
+
 export default {
   data() {
     return {
@@ -47,19 +52,19 @@ export default {
           id: 1,
           name: "Lasagna vegana",
           description: "Una deliziosa lasagna con ingredienti vegetali",
-          image: "https://via.placeholder.com/150",
+          image: LasagnaImage, // Usa l'immagine importata
         },
         {
           id: 2,
           name: "Polpette veg con barbabietola",
           description: "Gustose e semplici da preparare",
-          image: "https://via.placeholder.com/150",
+          image: PolpetteImage, // Usa l'immagine importata
         },
         {
           id: 3,
           name: "Gozleme",
           description: "Uno snack gustoso e leggero",
-          image: "https://via.placeholder.com/150",
+          image: GozlemeImage, // Usa l'immagine importata
         },
       ],
     };
@@ -77,11 +82,7 @@ export default {
   methods: {
     performSearch() {
       // Mostra i risultati solo se c'è una query di ricerca
-      if (this.searchQuery) {
-        this.showResults = true;
-      } else {
-        this.showResults = false; // Nascondi i risultati se non c'è query
-      }
+      this.showResults = !!this.searchQuery;
     },
   },
 };
