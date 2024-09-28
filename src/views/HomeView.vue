@@ -1,8 +1,5 @@
 <template>
   <div>
-    <!-- Logo e messaggio di benvenuto -->
-    <img alt="Vue logo" src="../assets/logo.png" />
-
     <SliderComponent />
     <!-- Inserisci il carosello qui -->
 
@@ -35,6 +32,4 @@ export default {
 };
 </script>
 
-<style scoped>
-/* Aggiungi eventuali stili personalizzati qui */
-</style>
+<style src="@/assets/css/stile.css"></style>
