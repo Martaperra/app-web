@@ -1,5 +1,14 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img
+        src="../assets/logo2.jpg"
+        alt="Logo"
+        width="30"
+        height="30"
+        class="d-inline-block align-text-top me-2"
+      />
+    </a>
     <a class="navbar-brand" href="#">Cucina Vegana</a>
     <button
       class="navbar-toggler"

@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-4">
-    <h1 class="text-center mb-4">Le nostre Ricette</h1>
+    <h1 class="text-center mb-4">Le nostre ricette</h1>
 
     <div class="row">
       <div class="col-md-4 mb-4" v-for="ricetta in ricette" :key="ricetta.id">
@@ -22,7 +22,9 @@
       </div>
     </div>
 
-    <button class="btn btn-secondary" @click="openForm">Carica Foto</button>
+    <button class="btn btn-secondary" @click="openForm">
+      Carica la tua foto
+    </button>
 
     <!-- Assicurati che il ref sia impostato correttamente -->
     <FormComponent ref="form" />
@@ -30,7 +32,8 @@
 </template>
 
 <script>
-import FormComponent from "@/components/FormComponent.vue"; // Importa il componente corretto
+import FormComponent from "@/components/FormComponent.vue";
+import GozlemeImage from "@/assets/GozlemeImage.jpg";
 
 export default {
   name: "RicetteMaster",
@@ -42,10 +45,10 @@ export default {
       ricette: [
         {
           id: 1,
-          title: "Fette di cavolfiore filanti con salsa verde e pomodorini",
+          title: "Gozleme - spinaci e formaggio vegetale",
           description:
-            "Le fette di cavolfiore filanti sono gustosissime bisteccone vegetariane guarnite con formaggio (facoltativo), salsa verde e pomodorini. Un accordo di sapori carnoso e fresco allo stesso tempo.",
-          image: "https://via.placeholder.com/300x200", // Placeholder per ora
+            "Uno snack gustoso e leggero, per chi non ama i sapori strong!",
+          image: GozlemeImage,
           cookingTime: "40 minuti",
         },
         {
@@ -60,7 +63,7 @@ export default {
           id: 3,
           title: "Lasagne vegane",
           description:
-            "La ricetta del grande classico rivisitato in chiave vegan.",
+            "Lasciatevi stupire dalla ricetta del grande classico rivisitato in chiave vegan.",
           image: "https://via.placeholder.com/300x200", // Placeholder
           cookingTime: "2 ore",
         },
