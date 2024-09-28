@@ -56,7 +56,7 @@ export default {
           title: "Polpette di ceci e barbabietole",
           description:
             "Le polpette! Le adoro, sono uno di quei comfort food a cui non so proprio dire di no.",
-          image: "https://via.placeholder.com/300x200", // Usa un URL reale per l'immagine
+          image: PolpetteImage,
           cookingTime: "1 ora e 30 minuti",
         },
         {
@@ -64,7 +64,7 @@ export default {
           title: "Lasagne vegane",
           description:
             "Lasciatevi stupire dalla ricetta del grande classico rivisitato in chiave vegan.",
-          image: "https://via.placeholder.com/300x200", // Placeholder
+          image: LasagnaImage,
           cookingTime: "2 ore",
         },
       ],
