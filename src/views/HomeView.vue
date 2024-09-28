@@ -1,27 +1,40 @@
 <template>
-  <div class="home">
+  <div>
+    <!-- Logo e messaggio di benvenuto -->
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
 
-    <!-- Link alla pagina delle ricette -->
-    <router-link to="/recipes" class="btn btn-primary mt-3">
-      Vai alla lista delle ricette
-    </router-link>
+    <SliderComponent />
+    <!-- Inserisci il carosello qui -->
+
+    <!-- Mostra il dettaglio della ricetta se una ricetta è selezionata -->
+    <RicetteDetail v-if="selectedRecipeId" :id="selectedRecipeId" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+// @ è un alias per /src
+import RicetteDetail from "@/views/RicetteDetail.vue"; // Assicurati che il percorso sia corretto
+import SliderComponent from "@/components/SliderComponent.vue";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    RicetteDetail,
+    SliderComponent,
+  },
+  data() {
+    return {
+      selectedRecipeId: null, // Inizialmente nessuna ricetta selezionata
+    };
+  },
+  methods: {
+    selectRecipe(id) {
+      this.selectedRecipeId = id; // Imposta l'ID della ricetta selezionata
+    },
   },
 };
 </script>
 
-<style>
+<style scoped>
 /* Aggiungi eventuali stili personalizzati qui */
 </style>

@@ -1,25 +1,25 @@
 <template>
   <div id="app">
-    <Navbar />
+    <!-- Navbar visualizzata su tutte le pagine -->
+    <NavbarApp />
 
+    <!-- Contenuto dinamico delle pagine -->
     <router-view />
   </div>
 </template>
 
 <script>
-import Navbar from "./components/Navbar.vue";
+// Importa la Navbar
+import NavbarApp from "@/components/NavbarApp.vue";
 
 export default {
   name: "App",
   components: {
-    Navbar,
+    NavbarApp,
   },
 };
 </script>
 
 <style>
-#app {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-}
+/* Stili globali, se necessari */
 </style>

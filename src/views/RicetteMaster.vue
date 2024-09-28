@@ -21,11 +21,22 @@
         </div>
       </div>
     </div>
+
+    <button class="btn btn-secondary" @click="openForm">Carica Foto</button>
+
+    <!-- Assicurati che il ref sia impostato correttamente -->
+    <FormComponent ref="form" />
   </div>
 </template>
 
 <script>
+import FormComponent from "@/components/FormComponent.vue"; // Importa il componente corretto
+
 export default {
+  name: "RicetteMaster",
+  components: {
+    FormComponent,
+  },
   data() {
     return {
       ricette: [
@@ -34,7 +45,7 @@ export default {
           title: "Fette di cavolfiore filanti con salsa verde e pomodorini",
           description:
             "Le fette di cavolfiore filanti sono gustosissime bisteccone vegetariane guarnite con formaggio (facoltativo), salsa verde e pomodorini. Un accordo di sapori carnoso e fresco allo stesso tempo.",
-          image: "https://via.placeholder.com/300x200", // Placeholder per ora, correggi con un URL reale
+          image: "https://via.placeholder.com/300x200", // Placeholder per ora
           cookingTime: "40 minuti",
         },
         {
@@ -50,12 +61,16 @@ export default {
           title: "Lasagne vegane",
           description:
             "La ricetta del grande classico rivisitato in chiave vegan.",
-          image: "https://via.placeholder.com/300x200", // Placeholder, sostituisci con URL valido
+          image: "https://via.placeholder.com/300x200", // Placeholder
           cookingTime: "2 ore",
         },
-        // Aggiungi altre ricette qui...
       ],
     };
+  },
+  methods: {
+    openForm() {
+      this.$refs.form.openForm(); // Chiama il metodo openForm sul componente
+    },
   },
 };
 </script>

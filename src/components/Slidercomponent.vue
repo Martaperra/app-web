@@ -4,7 +4,7 @@
     controls
     indicators
     background="#ababab"
-    interval="4000"
+    :interval="4000"
     img-width="1024"
     img-height="480"
   >
@@ -19,15 +19,28 @@
 
 <script>
 export default {
+  name: "SliderComponent",
   data() {
     return {
       slides: [
-        { caption: "Slide 1", imgSrc: "https://via.placeholder.com/1024x480" },
-        { caption: "Slide 2", imgSrc: "https://via.placeholder.com/1024x480" },
-        { caption: "Slide 3", imgSrc: "https://via.placeholder.com/1024x480" },
-        { caption: "Slide 4", imgSrc: "https://via.placeholder.com/1024x480" },
+        {
+          caption: "Ricette vegane per una vita sana",
+          imgSrc: "https://via.placeholder.com/1024x480",
+        },
+        {
+          caption: "Piatto del giorno: Insalata di Quinoa",
+          imgSrc: "https://via.placeholder.com/1024x480",
+        },
+        {
+          caption: "Tofu alla Griglia",
+          imgSrc: "https://via.placeholder.com/1024x480",
+        },
       ],
     };
   },
 };
 </script>
+
+<style scoped>
+/* Stili personalizzati per il carousel se necessari */
+</style>
