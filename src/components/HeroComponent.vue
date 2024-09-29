@@ -20,6 +20,7 @@ export default {
 <style scoped>
 .hero-section {
   height: 100vh;
+  background-image: url("@/assets/SfondoHome.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -36,7 +37,7 @@ export default {
 
 .content {
   position: relative;
-  z-index: 1;
+  z-index: 1; /* Mantiene il contenuto sopra l'overlay */
 }
 
 h1 {
@@ -48,8 +49,18 @@ h1 {
   font-size: 1.5rem;
 }
 
-.btn-primary {
-  background-color: #5cb85c;
-  border-color: #5cb85c;
+.btn {
+  background-color: #5cb85c; /* Colore di base del pulsante */
+  border-color: #5cb85c; /* Colore del bordo */
+}
+
+.btn:hover {
+  background-color: #4cae4c; /* Colore verde scuro al passaggio del mouse */
+  border-color: #4cae4c; /* Colore del bordo al passaggio del mouse */
+}
+
+.btn-link:hover {
+  color: #255e25; /* Colore del testo al passaggio del mouse */
+  text-decoration: underline;
 }
 </style>
