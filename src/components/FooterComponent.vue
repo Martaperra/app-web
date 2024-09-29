@@ -59,7 +59,7 @@ export default {
 
 .breadcrumb-item a {
   text-decoration: none;
-  color: #348634;
+  color: #384138;
 }
 
 .breadcrumb-item a:hover {
@@ -84,7 +84,7 @@ export default {
   background-color: #4cae4c; /* Verde per il pulsante */
   color: white;
   border: none;
-  border-radius: 25px; /* Bordi completamente arrotondati */
+  border-radius: 5px; /* Bordi completamente arrotondati */
   cursor: pointer;
   padding: 10px 15px; /* Spaziatura del pulsante */
   transition: background-color 0.3s ease;
@@ -96,6 +96,6 @@ export default {
 
 .form-control {
   width: 200px; /* Imposta una larghezza fissa per il campo email */
-  border-radius: 25px; /* Bordi arrotondati per il campo email */
+  border-radius: 5px; /* Bordi arrotondati per il campo email */
 }
 </style>

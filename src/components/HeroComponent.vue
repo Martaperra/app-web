@@ -6,7 +6,9 @@
     <div class="content">
       <h1>Benvenuti nel mondo della cucina vegana!</h1>
       <p class="lead">Scopri ricette sane, gustose e veloci da preparare.</p>
-      <button class="btn btn-primary btn-lg mt-4">Scopri di più</button>
+      <router-link to="/recipes" class="btn btn-primary btn-lg mt-4">
+        Scopri di più
+      </router-link>
     </div>
   </div>
 </template>

@@ -1,22 +1,24 @@
 <template>
   <div>
-    <h2 class="text-center mb-4">Cerca Ricette</h2>
+    <h2 class="text-center mb-4" style="color: green">Cerca Ricette</h2>
 
-    <div class="text-center mb-3">
+    <div
+      class="text-center mb-3 d-flex justify-content-center align-items-center"
+    >
       <input
         type="text"
         v-model="searchQuery"
         placeholder="Cerca una ricetta..."
-        class="form-control"
+        class="form-control me-2"
       />
-      <button class="btn btn-primary mt-2" @click="performSearch">Cerca</button>
+      <button class="btn-custom btn btn-primary" @click="performSearch">
+        Cerca
+      </button>
     </div>
 
     <!-- Mostra i risultati solo dopo che la ricerca è stata eseguita -->
-    <div v-if="showResults">
-      <h3 class="text-center">
-        Risultati della ricerca per "{{ searchQuery }}"
-      </h3>
+    <div v-if="showResults" class="text-center">
+      <h3>Risultati della ricerca per "{{ searchQuery }}"</h3>
       <div class="row">
         <div
           class="col-md-4"
@@ -32,12 +34,14 @@
           </div>
         </div>
       </div>
+      <button class="btn btn-secondary mt-3" @click="resetSearch">
+        Nascondi Risultati
+      </button>
     </div>
   </div>
 </template>
 
 <script>
-// Importa le immagini dal percorso corretto
 import LasagnaImage from "@/assets/LasagnaImage.jpg";
 import PolpetteImage from "@/assets/PolpetteImage.jpg";
 import GozlemeImage from "@/assets/GozlemeImage.jpg";
@@ -46,32 +50,31 @@ export default {
   data() {
     return {
       searchQuery: "",
-      showResults: false, // Variabile per controllare se mostrare i risultati
+      showResults: false,
       recipes: [
         {
           id: 1,
           name: "Lasagna vegana",
           description: "Una deliziosa lasagna con ingredienti vegetali",
-          image: LasagnaImage, // Usa l'immagine importata
+          image: LasagnaImage,
         },
         {
           id: 2,
           name: "Polpette veg con barbabietola",
           description: "Gustose e semplici da preparare",
-          image: PolpetteImage, // Usa l'immagine importata
+          image: PolpetteImage,
         },
         {
           id: 3,
           name: "Gozleme",
           description: "Uno snack gustoso e leggero",
-          image: GozlemeImage, // Usa l'immagine importata
+          image: GozlemeImage,
         },
       ],
     };
   },
   computed: {
     filteredRecipes() {
-      // Filtra le ricette in base alla query di ricerca
       return this.recipes.filter((recipe) => {
         return recipe.name
           .toLowerCase()
@@ -81,8 +84,18 @@ export default {
   },
   methods: {
     performSearch() {
-      // Mostra i risultati solo se c'è una query di ricerca
       this.showResults = !!this.searchQuery;
+
+      // Nascondi i risultati dopo 5 secondi se ci sono risultati
+      if (this.showResults) {
+        setTimeout(() => {
+          this.resetSearch();
+        }, 3000);
+      }
+    },
+    resetSearch() {
+      this.searchQuery = "";
+      this.showResults = false;
     },
   },
 };
@@ -91,7 +104,7 @@ export default {
 <style scoped>
 .form-control {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .card-img-top {
@@ -101,5 +114,31 @@ export default {
 
 h2 {
   margin-top: 20px;
+}
+
+.btn-custom {
+  background-color: #5cb85c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-custom:hover {
+  background-color: #4cae4c;
+  transform: scale(1.05);
+}
+
+.btn-custom:active {
+  background-color: #4cae4c;
+  transform: scale(0.98);
+}
+
+.btn-custom:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
 }
 </style>

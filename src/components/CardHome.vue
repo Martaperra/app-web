@@ -26,8 +26,8 @@
         </div>
       </b-col>
       <b-col md="4" @mouseover="hovered = 3" @mouseleave="hovered = 0">
-        <div class="icon-container mb-3" @click="navigateTo('NotFound')">
-          <h4 :class="{ 'text-hover': hovered === 3 }">Le vostre foto</h4>
+        <div class="icon-container mb-3" @click="navigateTo('recipes')">
+          <h4 :class="{ 'text-hover': hovered === 3 }">Carica la tua foto</h4>
           <p :class="{ 'text-hover': hovered === 3 }">
             Una raccolta delle nostre ricette... fatte da voi!
           </p>
@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     navigateTo(route) {
-      // Usa il router di Vue direttamente per le altre rotte
+      // Naviga alla rotta usando il nome definito nel router
       this.$router.push({ name: route });
     },
   },

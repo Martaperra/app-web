@@ -9,11 +9,23 @@
           </button>
         </div>
         <div class="modal-body">
-          <p>Carica la foto della ricetta e scrivici che ne pensi.</p>
+          <p>
+            <strong
+              >Carica la foto della ricetta e raccontaci la tua
+              esperienza!</strong
+            >
+          </p>
           <form @submit.prevent="submitForm">
             <div class="form-group">
-              <label for="file">Carica la foto</label>
-              <input type="file" id="file" v-on="photo" class="form-control" />
+              <label for="file">Carica la foto*</label>
+              <input
+                type="file"
+                id="file"
+                @change="handleFileUpload"
+                class="form-control"
+                required
+                aria-label="Carica la foto"
+              />
             </div>
 
             <div class="form-group">
@@ -22,35 +34,50 @@
                 id="comment"
                 v-model="comment"
                 class="form-control"
+                placeholder="Scrivi qui il tuo commento..."
+                aria-label="Commento"
               ></textarea>
             </div>
 
             <div class="form-group">
-              <label for="name">Il tuo nome</label>
+              <label for="name">Il tuo nome*</label>
               <input
                 type="text"
                 id="name"
                 v-model="name"
                 class="form-control"
                 required
+                placeholder="Inserisci il tuo nome..."
+                aria-label="Nome"
               />
             </div>
 
             <div class="form-group">
-              <label for="email">Il tuo indirizzo email</label>
+              <label for="email">Il tuo indirizzo email*</label>
               <input
                 type="email"
                 id="email"
                 v-model="email"
                 class="form-control"
                 required
+                placeholder="Inserisci la tua email..."
+                aria-label="Email"
               />
             </div>
 
-            <button type="submit" class="btn btn-primary mt-3">
-              Invia la foto
-            </button>
+            <div class="text-center mt-3">
+              <button
+                type="submit"
+                class="btn btn-submit"
+                :disabled="isSubmitting"
+              >
+                {{ isSubmitting ? "Invio..." : "Invia la foto" }}
+              </button>
+            </div>
           </form>
+          <p v-if="submissionSuccess" class="text-success mt-3">
+            Grazie per aver inviato la tua foto!
+          </p>
         </div>
       </div>
     </div>
@@ -66,23 +93,41 @@ export default {
       comment: "",
       name: "",
       email: "",
+      isSubmitting: false,
+      submissionSuccess: false,
     };
   },
   methods: {
     openForm() {
-      this.showForm = true; // Mostra il modulo
+      this.showForm = true; //
     },
     closeForm() {
       this.showForm = false; // Nascondi il modulo
+      this.resetForm(); // Resetta il modulo alla chiusura
     },
-    submitForm() {
+    resetForm() {
+      this.photo = null;
+      this.comment = "";
+      this.name = "";
+      this.email = "";
+      this.isSubmitting = false;
+      this.submissionSuccess = false;
+    },
+    handleFileUpload(event) {
+      this.photo = event.target.files[0]; // Salva la foto selezionata
+    },
+    async submitForm() {
+      this.isSubmitting = true; // Inizia il caricamento
+      // Simulazione invio
+      await new Promise((resolve) => setTimeout(resolve, 2000)); // Simula un ritardo di invio
       console.log("Form submitted!", {
         photo: this.photo,
         comment: this.comment,
         name: this.name,
         email: this.email,
       });
-      this.closeForm(); // Chiudi il modulo dopo l'invio
+      this.submissionSuccess = true; // Mostra il messaggio di successo
+      this.isSubmitting = false; // Termina il caricamento
     },
   },
 };
@@ -99,5 +144,34 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 20px; /* Aggiunta padding per il contenuto */
+}
+
+.btn-submit {
+  background-color: #4cae4c; /* Colore verde */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #419043; /* Colore verde più scuro al passaggio del mouse */
+}
+
+.btn-submit:disabled {
+  background-color: #cccccc; /* Colore grigio se disabilitato */
+  cursor: not-allowed;
+}
+
+.text-center {
+  text-align: center; /* Centrato orizzontalmente */
 }
 </style>
