@@ -99,11 +99,11 @@ export default {
   },
   methods: {
     openForm() {
-      this.showForm = true; //
+      this.showForm = true;
     },
     closeForm() {
-      this.showForm = false; // Nascondi il modulo
-      this.resetForm(); // Resetta il modulo alla chiusura
+      this.showForm = false;
+      this.resetForm();
     },
     resetForm() {
       this.photo = null;
@@ -114,20 +114,20 @@ export default {
       this.submissionSuccess = false;
     },
     handleFileUpload(event) {
-      this.photo = event.target.files[0]; // Salva la foto selezionata
+      this.photo = event.target.files[0];
     },
     async submitForm() {
-      this.isSubmitting = true; // Inizia il caricamento
-      // Simulazione invio
-      await new Promise((resolve) => setTimeout(resolve, 2000)); // Simula un ritardo di invio
+      this.isSubmitting = true;
+      
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       console.log("Form submitted!", {
         photo: this.photo,
         comment: this.comment,
         name: this.name,
         email: this.email,
       });
-      this.submissionSuccess = true; // Mostra il messaggio di successo
-      this.isSubmitting = false; // Termina il caricamento
+      this.submissionSuccess = true;
+      this.isSubmitting = false;
     },
   },
 };
@@ -149,11 +149,11 @@ export default {
 .modal-content {
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  padding: 20px; /* Aggiunta padding per il contenuto */
+  padding: 20px;
 }
 
 .btn-submit {
-  background-color: #4cae4c; /* Colore verde */
+  background-color: #4cae4c;
   color: white;
   border: none;
   border-radius: 5px;
@@ -163,15 +163,15 @@ export default {
 }
 
 .btn-submit:hover {
-  background-color: #419043; /* Colore verde più scuro al passaggio del mouse */
+  background-color: #419043;
 }
 
 .btn-submit:disabled {
-  background-color: #cccccc; /* Colore grigio se disabilitato */
+  background-color: #cccccc;
   cursor: not-allowed;
 }
 
 .text-center {
-  text-align: center; /* Centrato orizzontalmente */
+  text-align: center;
 }
 </style>

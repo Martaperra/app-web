@@ -39,7 +39,7 @@ export default {
 
 .content {
   position: relative;
-  z-index: 1; /* Mantiene il contenuto sopra l'overlay */
+  z-index: 1;
 }
 
 h1 {
@@ -52,17 +52,17 @@ h1 {
 }
 
 .btn {
-  background-color: #5cb85c; /* Colore di base del pulsante */
-  border-color: #5cb85c; /* Colore del bordo */
+  background-color: #5cb85c;
+  border-color: #5cb85c;
 }
 
 .btn:hover {
-  background-color: #4cae4c; /* Colore verde scuro al passaggio del mouse */
-  border-color: #4cae4c; /* Colore del bordo al passaggio del mouse */
+  background-color: #4cae4c;
+  border-color: #4cae4c;
 }
 
 .btn-link:hover {
-  color: #255e25; /* Colore del testo al passaggio del mouse */
+  color: #255e25;
   text-decoration: underline;
 }
 </style>

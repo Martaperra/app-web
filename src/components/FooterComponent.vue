@@ -49,7 +49,7 @@ export default {
 
 <style scoped>
 .footer-container {
-  background-color: #4cae4c; /* Verde per il footer */
+  background-color: #4cae4c;
   margin-top: 50px;
 }
 
@@ -69,33 +69,33 @@ export default {
 .newsletter-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra il contenuto orizzontalmente */
-  max-width: 500px; /* Limita la larghezza del contenitore della newsletter */
-  margin: 20px auto; /* Centra il contenitore con margine sopra e sotto */
+  align-items: center;
+  max-width: 500px;
+  margin: 20px auto;
 }
 
 .input-group {
   display: flex;
-  align-items: center; /* Allinea verticalmente gli elementi nel gruppo */
-  gap: 10px; /* Spazio tra la barra di inserimento e il pulsante */
+  align-items: center;
+  gap: 10px;
 }
 
 .btn-custom {
-  background-color: #4cae4c; /* Verde per il pulsante */
+  background-color: #4cae4c;
   color: white;
   border: none;
-  border-radius: 5px; /* Bordi completamente arrotondati */
+  border-radius: 5px;
   cursor: pointer;
-  padding: 10px 15px; /* Spaziatura del pulsante */
+  padding: 10px 15px;
   transition: background-color 0.3s ease;
 }
 
 .btn-custom:hover {
-  background-color: #3e913b; /* Verde più scuro al passaggio del mouse */
+  background-color: #3e913b;
 }
 
 .form-control {
-  width: 200px; /* Imposta una larghezza fissa per il campo email */
-  border-radius: 5px; /* Bordi arrotondati per il campo email */
+  width: 200px;
+  border-radius: 5px;
 }
 </style>

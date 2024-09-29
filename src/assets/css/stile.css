@@ -1,76 +1,70 @@
-/* Stili globali */
+
 body {
   font-family: "Arial", sans-serif;
-  background-color: hsl(103, 96%, 79%); /* Colore di sfondo chiaro */
-  color: #333; /* Colore del testo */
+  background-color: hsl(103, 96%, 79%);
+  color: #333;
   margin: 0;
   padding: 0;
 }
 
-/* Container principale */
+
 .container {
-  max-width: 1200px; /* Larghezza massima del contenitore */
-  margin: auto; /* Centra il contenitore */
-  padding: 20px; /* Spaziatura interna */
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
-/* Intestazione */
 h1 {
-  color: #419043; /* Verde per il titolo */
-  font-size: 2.5em; /* Dimensione del titolo */
-  margin-bottom: 20px; /* Spazio sotto il titolo */
-  text-align: center; /* Centro il titolo */
+  color: #419043;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-/* Card delle ricette */
 .card {
-  border-radius: 10px; /* Angoli arrotondati */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
-  transition: transform 0.3s; /* Transizione dolce per l'effetto hover */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
 .card:hover {
   transform: scale(
     1.05
-  ); /* Ingrandisce leggermente la card al passaggio del mouse */
+  );
 }
 
-/* Immagini delle ricette */
 .card-img-top {
-  border-radius: 10px 10px 0 0; /* Angoli arrotondati solo in alto */
+  border-radius: 10px 10px 0 0;
 }
 
-/* Testo della card */
 .card-title {
-  font-size: 1.5em; /* Dimensione del titolo della ricetta */
-  color: #419043; /* Colore del titolo */
+  font-size: 1.5em;
+  color: #419043;
 }
 
 .card-text {
-  font-size: 1em; /* Dimensione del testo descrittivo */
-  color: #666; /* Colore del testo descrittivo */
+  font-size: 1em;
+  color: #666;
 }
 
-/* Pulsanti */
 .btn {
-  background-color: #4caf50; /* Colore verde */
-  color: white; /* Colore del testo del pulsante */
-  border: none; /* Rimuovi bordo */
-  border-radius: 5px; /* Angoli arrotondati */
-  padding: 10px 20px; /* Spaziatura interna del pulsante */
-  text-transform: uppercase; /* Maiuscole */
-  font-weight: bold; /* Grassetto */
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .btn:hover {
-  background-color: #45a049; /* Colore più scuro al passaggio del mouse */
+  background-color: #45a049;
 }
 
-/* Footer */
 footer {
-  text-align: center; /* Centro il footer */
-  margin-top: 20px; /* Spazio sopra il footer */
-  padding: 10px 0; /* Spaziatura interna */
-  background-color: #4caf50; /* Verde di sfondo */
-  color: white; /* Colore del testo */
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  background-color: #4caf50;
+  color: white;
 }

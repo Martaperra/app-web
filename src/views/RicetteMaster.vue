@@ -2,7 +2,6 @@
   <div class="container mt-4">
     <h1 class="text-center mb-4" style="color: #419043">Le nostre ricette</h1>
 
-    <!-- Card grid responsivo -->
     <div class="row">
       <div
         class="col-md-6 col-lg-4 mb-4"
@@ -96,32 +95,31 @@ export default {
 
 <style scoped>
 .container {
-  max-width: 1200px; /* Mantiene un limite massimo della larghezza */
+  max-width: 1200px;
 }
 
-/* Card e immagine responsive */
 .recipe-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione per l'effetto hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .recipe-card:hover {
   transform: scale(
     1.05
-  ); /* Ingrandisci leggermente la card al passaggio del mouse */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombra più profonda */
+  );
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .recipe-img {
   width: 100%;
-  max-height: 200px; /* Limite di altezza per le immagini */
-  object-fit: cover; /* Le immagini si adattano bene alla card */
-  transition: transform 0.3s ease; /* Transizione per l'effetto hover */
+  max-height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .recipe-card:hover .recipe-img {
   transform: scale(
     1.05
-  ); /* Ingrandisci l'immagine leggermente al passaggio del mouse */
+  );
 }
 
 h1 {
@@ -135,7 +133,7 @@ p {
 }
 
 .btn-custom {
-  background-color: #4cae4c; /* Colore verde */
+  background-color: #4cae4c;
   color: white;
   border: none;
   border-radius: 5px;
@@ -145,6 +143,6 @@ p {
 }
 
 .btn-custom:hover {
-  background-color: #3e913b; /* Colore verde più scuro al passaggio del mouse */
+  background-color: #3e913b;
 }
 </style>

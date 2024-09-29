@@ -1,7 +1,6 @@
 <template>
   <div class="container mt-4">
     <div class="row mb-4">
-      <!-- Pulsante "Torna alla lista delle ricette" sopra l'immagine -->
       <div class="col-12 text-left">
         <router-link to="/recipes" class="btn-custom btn btn-primary">
           Torna alla lista delle ricette
@@ -10,18 +9,15 @@
     </div>
 
     <div class="row">
-      <!-- Colonna per l'immagine -->
       <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
         <img
           :src="recipe.image"
           class="img-fluid recipe-img"
           alt="Immagine Ricetta"
         />
-        <!-- Form per caricare immagini sotto la ricetta -->
         <FormComponent />
       </div>
 
-      <!-- Colonna per i dettagli della ricetta -->
       <div class="col-lg-6 col-md-6 col-sm-12">
         <h1>{{ recipe.title }}</h1>
         <p><strong>Descrizione:</strong> {{ recipe.description }}</p>
@@ -37,7 +33,6 @@
         <p><strong>Procedimento:</strong></p>
         <p>{{ recipe.instructions }}</p>
 
-        <!-- Pulsante "Torna alla lista delle ricette" sotto la ricetta -->
         <router-link to="/recipes" class="btn-custom btn btn-primary mt-2">
           Torna alla lista delle ricette
         </router-link>
@@ -53,17 +48,17 @@ import GozlemeImage from "@/assets/GozlemeImage.jpg";
 import PolpetteImage from "@/assets/PolpetteImage.jpg";
 import LasagnaImage from "@/assets/LasagnaImage.jpg";
 import ScrollToTop from "@/components/ScrollToTop.vue";
-import FormComponent from "@/components/FormComponent.vue"; // Import del form
+import FormComponent from "@/components/FormComponent.vue";
 
 export default {
   components: {
-    ScrollToTop, // Componente per tornare in cima alla pagina
-    FormComponent, // Componente del form
+    ScrollToTop,
+    FormComponent,
   },
 
   data() {
     return {
-      recipe: {}, // Dettagli della ricetta caricati dinamicamente
+      recipe: {},
     };
   },
 
@@ -129,71 +124,68 @@ export default {
       },
     ];
 
-    // Trova la ricetta in base all'ID
+    
     this.recipe = allRecipes.find((r) => r.id == recipeId) || {};
   },
 };
 </script>
 
 <style scoped>
-/* Ottimizzazione delle dimensioni dell'immagine */
 .recipe-img {
   width: 100%;
-  max-height: 300px; /* Limitiamo l'altezza massima per rendere l'immagine più compatta */
-  object-fit: cover; /* Manteniamo le proporzioni dell'immagine */
-  border-radius: 10px; /* Angoli arrotondati */
-  margin-bottom: 20px; /* Spaziatura sotto l'immagine */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunta di ombra per dare profondità */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animazione transizioni */
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 h1 {
   font-size: 2rem;
-  color: #419043; /* Verde scuro per il titolo */
+  color: #419043;
 }
 
 p {
-  color: #666; /* Grigio per il testo */
-  font-size: 1.1rem; /* Leggermente più grande per la leggibilità */
+  color: #666;
+  font-size: 1.1rem;
 }
 
 ul {
-  padding-left: 20px; /* Spaziatura standard per le liste */
+  padding-left: 20px;
 }
 
 li {
-  font-size: 1rem; /* Font delle liste coerente con il resto del testo */
-  line-height: 1.5; /* Migliora la leggibilità */
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .container {
-  max-width: 1200px; /* Limite massimo di larghezza per contenere il layout */
+  max-width: 1200px;
 }
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 1.5rem; /* Ridimensionamento per schermi più piccoli */
+    font-size: 1.5rem;
   }
 
   p,
   li {
-    font-size: 0.9rem; /* Testo più piccolo per dispositivi mobili */
+    font-size: 0.9rem;
   }
 }
 
-/* Stile del pulsante personalizzato */
 .btn-custom {
-  background-color: #4cae4c; /* Verde per il pulsante */
-  color: white; /* Testo bianco per il pulsante */
-  border: none; /* Rimuove i bordi */
-  border-radius: 5px; /* Angoli arrotondati */
-  cursor: pointer; /* Puntatore mouse per clic */
-  padding: 10px 20px; /* Spaziatura interna del pulsante */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Effetti hover */
+  background-color: #4cae4c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Effetto hover per il pulsante */
 .btn-custom:hover {
-  background-color: #3e913b; /* Verde più scuro al passaggio del mouse */
+  background-color: #3e913b;
 }
 </style>

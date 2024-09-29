@@ -15,24 +15,20 @@
 export default {
   data() {
     return {
-      isVisible: false, // Inizialmente il pulsante non è visibile
+      isVisible: false,
     };
   },
   mounted() {
-    // Aggiungi l'evento di scroll quando il componente è montato
     window.addEventListener("scroll", this.handleScroll);
   },
   beforeUnmount() {
-    // Rimuovi l'evento di scroll quando il componente è distrutto
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
     handleScroll() {
-      // Controlla se la pagina è scorsa verso il basso
-      this.isVisible = window.scrollY > 300; // Cambia il valore per la soglia
+      this.isVisible = window.scrollY > 300;
     },
     scrollToTop() {
-      // Scrolla lentamente verso l'alto
       window.scrollTo({ top: 0, behavior: "smooth" });
     },
   },
@@ -58,6 +54,6 @@ export default {
 }
 
 .scroll-to-top:hover {
-  background-color: #498849; /* Colore scuro al passaggio del mouse */
+  background-color: #498849;
 }
 </style>

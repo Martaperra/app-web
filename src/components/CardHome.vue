@@ -5,7 +5,6 @@
     </h2>
     <b-row>
       <b-col md="4" @mouseover="hovered = 1" @mouseleave="hovered = 0">
-        <!-- Usando router-link per collegarsi a /recipes -->
         <router-link
           to="/recipes"
           class="icon-container mb-3"
@@ -47,7 +46,6 @@ export default {
   },
   methods: {
     navigateTo(route) {
-      // Naviga alla rotta usando il nome definito nel router
       this.$router.push({ name: route });
     },
   },
@@ -57,26 +55,26 @@ export default {
 <style scoped>
 .icon-container {
   display: flex;
-  flex-direction: column; /* Allinea il testo verticalmente */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100px; /* Altezza dell'icona */
+  height: 100px;
   transition: box-shadow 0.3s ease;
-  cursor: pointer; /* Cambia il cursore in puntatore */
+  cursor: pointer;
 }
 
 h4,
 p {
-  margin-top: 10px; /* Margine sopra il titolo */
+  margin-top: 10px;
   transition: color 0.3s ease;
 }
 
 .text-hover {
-  color: green; /* Cambia il colore del testo */
+  color: green;
   text-shadow: 0 0 5px rgba(0, 128, 0, 0.8);
 }
 
 .icon-container:hover {
-  box-shadow: 0 4px 20px rgba(0, 128, 0, 0.5); /* Ombra attorno al testo */
+  box-shadow: 0 4px 20px rgba(0, 128, 0, 0.5);
 }
 </style>

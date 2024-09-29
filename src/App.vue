@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <!-- Navbar visualizzata su tutte le pagine -->
     <NavbarApp />
   </div>
   <div id="app">
@@ -11,7 +10,6 @@
 </template>
 
 <script>
-// Importa la Navbar
 import NavbarApp from "@/components/NavbarApp.vue";
 import BarraRicerca from "./components/BarraRicerca.vue";
 import FooterComponent from "./components/FooterComponent.vue";
