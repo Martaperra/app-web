@@ -6,7 +6,7 @@
       spostata.
     </p>
     <router-link to="/" class="btn btn-primary mt-3"
-      >Torna·alla·Home</router-link
+      >Torna alla Home</router-link
     >
   </div>
 </template>
