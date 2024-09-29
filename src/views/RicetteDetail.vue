@@ -124,7 +124,6 @@ export default {
       },
     ];
 
-    
     this.recipe = allRecipes.find((r) => r.id == recipeId) || {};
   },
 };

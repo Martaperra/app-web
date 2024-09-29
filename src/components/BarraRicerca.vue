@@ -16,7 +16,6 @@
       </button>
     </div>
 
-    
     <div v-if="showResults" class="text-center">
       <h3>Risultati della ricerca per "{{ searchQuery }}"</h3>
       <div class="row">

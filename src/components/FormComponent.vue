@@ -118,7 +118,7 @@ export default {
     },
     async submitForm() {
       this.isSubmitting = true;
-      
+
       await new Promise((resolve) => setTimeout(resolve, 2000));
       console.log("Form submitted!", {
         photo: this.photo,

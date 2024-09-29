@@ -69,8 +69,7 @@ export default {
         {
           id: 2,
           title: "Polpette di ceci e barbabietole",
-          description:
-            "Un secondo facile e veloce da preparare",
+          description: "Un secondo facile e veloce da preparare",
           image: PolpetteImage,
           cookingTime: "1 ora e 30 minuti",
         },
@@ -103,9 +102,7 @@ export default {
 }
 
 .recipe-card:hover {
-  transform: scale(
-    1.05
-  );
+  transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -117,9 +114,7 @@ export default {
 }
 
 .recipe-card:hover .recipe-img {
-  transform: scale(
-    1.05
-  );
+  transform: scale(1.05);
 }
 
 h1 {
