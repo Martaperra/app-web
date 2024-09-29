@@ -6,21 +6,22 @@
   <div id="app">
     <BarraRicerca></BarraRicerca>
   </div>
-
-  <!-- Contenuto dinamico delle pagine -->
   <router-view />
+  <FooterComponent></FooterComponent>
 </template>
 
 <script>
 // Importa la Navbar
 import NavbarApp from "@/components/NavbarApp.vue";
 import BarraRicerca from "./components/BarraRicerca.vue";
+import FooterComponent from "./components/FooterComponent.vue";
 
 export default {
   name: "App",
   components: {
     NavbarApp,
     BarraRicerca,
+    FooterComponent,
   },
 };
 </script>
