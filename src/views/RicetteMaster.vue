@@ -34,6 +34,8 @@
 <script>
 import FormComponent from "@/components/FormComponent.vue";
 import GozlemeImage from "@/assets/GozlemeImage.jpg";
+import PolpetteImage from "@/assets/PolpetteImage.jpg";
+import LasagnaImage from "@/assets/LasagnaImage.jpg";
 
 export default {
   name: "RicetteMaster",
