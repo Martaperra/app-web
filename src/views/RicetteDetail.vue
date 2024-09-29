@@ -74,8 +74,7 @@ export default {
       {
         id: 1,
         title: "Gozleme",
-        description:
-          "Un tradizionale piatto turco",
+        description: "Un tradizionale piatto turco",
         image: GozlemeImage,
         cookingTime: "40 minuti",
         ingredients: [
