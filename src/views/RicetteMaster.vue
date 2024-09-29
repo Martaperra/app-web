@@ -71,7 +71,7 @@ export default {
           id: 2,
           title: "Polpette di ceci e barbabietole",
           description:
-            "Le polpette! Le adoro, sono uno di quei comfort food a cui non so proprio dire di no.",
+            "Un secondo facile e veloce da preparare",
           image: PolpetteImage,
           cookingTime: "1 ora e 30 minuti",
         },

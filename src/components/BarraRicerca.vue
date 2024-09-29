@@ -16,7 +16,7 @@
       </button>
     </div>
 
-    <!-- Mostra i risultati solo dopo che la ricerca è stata eseguita -->
+    
     <div v-if="showResults" class="text-center">
       <h3>Risultati della ricerca per "{{ searchQuery }}"</h3>
       <div class="row">
@@ -86,7 +86,6 @@ export default {
     performSearch() {
       this.showResults = !!this.searchQuery;
 
-      // Nascondi i risultati dopo 5 secondi se ci sono risultati
       if (this.showResults) {
         setTimeout(() => {
           this.resetSearch();
