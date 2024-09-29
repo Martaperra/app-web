@@ -75,21 +75,20 @@ export default {
         id: 1,
         title: "Gozleme",
         description:
-          "Le fette di cavolfiore filanti sono gustosissime bisteccone vegetariane guarnite con formaggio (facoltativo), salsa verde e pomodorini.",
+          "Un tradizionale piatto turco",
         image: GozlemeImage,
         cookingTime: "40 minuti",
         ingredients: [
-          "1 cavolfiore",
-          "15 pomodorini",
-          "80 foglie di prezzemolo",
-          "6 capperi sott'olio",
-          "qb aceto",
-          "qb Sale",
-          "1 fetta di pane integrale",
-          "10 cucchiai olio extravergine di oliva",
+          "2kg spinaci freschi",
+          "2 confezioni feta greca",
+          "380 gr farina 00",
+          "185 ml acqua",
+          "90 ml olio extravergine di oliva",
+          "1 spicchio d'aglio",
+          "sale e pepe nero q.b.",
         ],
         instructions:
-          "Preriscaldate il forno a 180°. Tagliate a grosse fette (1,5 cm/2 cm di spessore) un cavolfiore e disponetele su una placca da forno foderata con la carta...",
+          "Per prima cosa preparare l'impasto: lavorare insieme tutti gli ingredienti in modo da ottenere un impasto liscio ed omogeneo. Creare una palla, avvolgerla nella pellicola trasparente e lasciarla riposare 20 minuti in frigorifero. Nel frattempo, lavare bene gli spinaci e cuocerli in una padella per pochi minuti con olio, pepe, uno spicchio di aglio in camicia e poco sale: strizzare bene e condirli con la feta sgretolata con le mani, sale e altro pepe. Dividere l'impasto in 4 parti e stendere ognuna formando dei rettangoli: farcirli con il ripieno e richiudere il tutto come se fosse un fagottino. Scaldare molto bene una padella antiaderente con poco olio: cuocere i Gozleme 4 minuti per parte o comunque per il tempo necessario a che l'impasto risulti colorato e ben croccante.",
       },
       {
         id: 2,
@@ -117,13 +116,17 @@ export default {
         image: LasagnaImage,
         cookingTime: "1 ora e 20 minuti",
         ingredients: [
-          "300g Pasta fresca per lasagna",
-          "100g Ragù vegetale",
-          "200g Besciamella vegana",
-          "100g Formaggio vegano",
+          "800 gr latte di soia",
+          "40 gr olio extravergine",
+          "noce moscata",
+          "60 gr di farina",
+          "sale q.b.",
+          "200 gr pane carasau",
+          "verdure a scelta",
+          "250 gr di erbette",
         ],
         instructions:
-          "Prepara il ragù e la besciamella vegana. Assembla la lasagna alternando strati di pasta, ragù e formaggio. Cuoci in forno a 180°C per 40 minuti.",
+          "Prepara la besciamella: raccogli la farina in un pentolino. Aggiungi l'olio e mescola con una frusta. Versa poco per volta il latte di soia e mescola fino ad avere una miscela liscia. Aggiungi un pizzico di sale, una grattugiata di noce moscata e metti sul fuoco. Cuoci la besciamella a fuoco dolce mescolando frequentemente. Successivamente affetta i porri e taglia a tocchetti le carote. Trasferisci le verdure in una padella con due cucchiai d'olio e gli aghi del rosmarino tritati.  Aggiungi un pizzico di sale, metti un coperchio e fai stufare per 4-5 minuti. Nel frattempo, affetta le erbette. Trasferisci le erbette nella padella con il resto degli ortaggi. Metti il coperchio e lascia cuocere finché non saranno appassite. Regola di sale. Ora componi le lasagne: versa un mestolo di besciamella sul fondo e aggiungi il pane carasau. Distribuisci sopra un po' delle verdure stufate, besciamella e pane carasau per quattro strati. Trascorso il tempo di cottura, sforna le lasagne vegane e servile.",
       },
     ];
 
